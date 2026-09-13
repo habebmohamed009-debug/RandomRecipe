@@ -1,0 +1,208 @@
+ul{
+    list-style: none;
+}
+.scroll-bar{
+    scrollbar-width: thin;
+    scrollbar-color: #fe886a4d transparent;
+}
+/* start header */
+header .image{
+    width: 40px;
+    height: 40px;
+    --bs-border-color:#ffb869;
+}
+header .icon{
+    width: 45px;
+    height: 45px;
+    background-color: #FD4227;
+}
+header h1{
+    font-size: 24px;
+    color: #101828;
+    font-weight: 700;
+}
+header p{
+    font-size: 14px;
+    color: #6a7282;
+}
+header .nav-link:hover{
+    color: #FD4227;
+}
+header .navbar-collapse{
+    --bs-border-color:#ffedd4;
+}
+header .navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}
+/* end header */
+/* start main */
+main{
+    background-color: #FFF8EC;
+    height: 1350px ;
+    padding-top: 90px;
+}
+main .image img{
+    height: 350px;
+}
+main .image .rating{
+    top: 20px;
+    left: 20px;
+}
+main .image .info{
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+}
+main .fixed-height{
+    height: 750px;
+}
+main .details .origin{
+    top: 20px;
+    left: 150px;
+}
+main .details .level{
+    top: 20px;
+    left: 30px;
+}
+main .details .icon{
+    width: 45px;
+    height: 45px;
+    background-color: #FFEDD4;
+    color:#F54900 ;
+    transition: .3s;
+    cursor: pointer;
+}
+main .details .icon:hover{
+    background-color: #FFD6A7;
+}
+main .nav-tabs .nav-link{
+    border: none;
+    color: #6a7282;
+    font-weight: 700;
+}
+main  .nav-tabs .nav-link.active{
+    border-bottom: 2px solid #f54900;
+    color: #F54900;
+    font-weight: 700;
+}
+main .nav-tabs .nav-link:not(:active):hover{
+    color:#364153 ;
+}
+.ingredients{
+    background-color: #FFF9EC;
+    height: 350px;
+}
+.ingredients ul{
+    counter-reset: myCounter;
+}
+.ingredients ul li{
+    counter-increment: myCounter;
+}
+.ingredients ul li::before{
+    content: counter(myCounter);
+    position: absolute;
+    left: -35px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6900;
+    color: #fff;
+}
+.instructions{
+    background-color: #fff;
+    height: 350px;
+}
+.instructions ul{
+counter-reset: myCounter2;
+}
+.instructions ul li{
+    counter-increment:myCounter2 ;
+}
+.instructions ul li::before{
+    content: counter(myCounter2);
+    position: absolute;
+    left: -50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6900;
+    color: #fff;
+}
+.nutration{
+height: 350px;
+}
+.nutration i{
+    width: 40px;
+    height: 40px;
+}
+.nutration i.cal{
+    color:#F54900 ;
+    background-color: #FFEDD4;
+}
+.nutration i.pro{
+    color: #155DFC;
+    background-color:#DBEAFE ;
+}
+.nutration i.carb{
+    color: #D08700;
+    background-color:#FEF9C2 ;
+}
+.nutration i.fat{
+    color:#E7000B ;
+    background-color: #FFE2E2;
+}
+.nutration i.fiber{
+    color: #1EB255;
+    background-color:#DBFCE7 ;
+}
+.nutration i.sod{
+    color:#E60076 ;
+    background-color:#FCE7F3 ;
+}
+.tips{
+height: 350px;
+}
+
+.tips ul li{
+    background-color: #FFFBEB;
+    box-shadow: -4px 0px 0 0 #F54900;
+}
+
+#shuffle{
+    background-image: linear-gradient(to right,#ff6900 50%, #fb2c36 100%);
+    transition: .3s;
+}
+#shuffle:hover{
+    transform: scale(1.03);
+    background-image: linear-gradient(to right,#f54900 50%, #e7000b 100%);
+}
+/* end main */
+
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+    header .navbar-collapse{
+        --bs-border-width:0px
+    }
+    
+}
+@media (min-width: 992px) {
+    main{
+        height: 900px;
+    }
+    main .image img{
+        height: 100%;
+    }
+
+}
+@media (min-width: 1200px) {
+    
+}
