@@ -1,208 +1,328 @@
-ul{
-    list-style: none;
-}
-.scroll-bar{
-    scrollbar-width: thin;
-    scrollbar-color: #fe886a4d transparent;
-}
 /* start header */
+header .title i{
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(to right,#7f22fe 50%,#4f39f6 100%);
+}
+header .title span{
+    color: #7f22fe;
+}
 header .image{
     width: 40px;
     height: 40px;
-    --bs-border-color:#ffb869;
 }
-header .icon{
-    width: 45px;
-    height: 45px;
-    background-color: #FD4227;
+header .dropdown-toggle::after{
+    display: none;
 }
-header h1{
-    font-size: 24px;
-    color: #101828;
-    font-weight: 700;
+header .btn{
+    background-image: linear-gradient(to right,#7f22fe 50%,#4f39f6 100%);
+    transition: .3s;
 }
-header p{
+header .btn:hover{
+    transform: translateY(-2px);
+}
+.offcanvas.offcanvas-top {
+    top: 50px;
+    left: 15%;
+    right: 15%;
+    height: 300px;
+    max-height: 100%;
+    border-bottom: 1px solid #0000002d;;
+}
+/* start modal for inputs */
+.modal.fade{
+    backdrop-filter: blur(4px)
+}
+.modal .modal-body .profile-image > i{
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+} 
+.modal .modal-body .profile-image img{
+    width: 70px;
+    height: 70px;
+}
+.modal .modal-body .profile-image button{
+    transition: .3s;
+    background-color: #F3F4F6;
+}
+.modal .modal-body .profile-image button:hover{
+    background-color: #E5E7EB;
+}
+.modal .modal-body .form-control,
+.modal .modal-body .form-select{
+    background-color: #F9FAFB;
+}
+.modal .modal-body .form-control:focus,
+.modal .modal-body .form-select:focus{
+    background-color: #fff;
+    border-color: #8e51ff;
+    box-shadow: 0 0 0 2px color-mix(in oklab, #8e51ff 20%, transparent);
+}
+.modal .modal-body .form-select{
+    color: #000;
     font-size: 14px;
-    color: #6a7282;
 }
-header .nav-link:hover{
-    color: #FD4227;
+.modal .modal-body textarea{
+    resize: none;
 }
-header .navbar-collapse{
-    --bs-border-color:#ffedd4;
+.modal .modal-body .form-label{
+    font-size: 14px;
+    font-weight: 500;
+    color: #364153;
 }
-header .navbar-toggler:focus{
-    outline: none;
+.modal .modal-body .form-control::placeholder{
+    font-size: 14px;
+    font-weight: 500;
+    color: #8e8c8c;
+}
+.modal .modal-body .form-check-input{
+    width: 20px;
+    height: 20px;cursor: pointer;
+}
+.modal .modal-body .form-check-input:focus{
     box-shadow: none;
 }
+.modal .modal-body .form-check-label.favourite i{
+    color: #FFB900;
+}
+.modal .modal-body .form-check-label.emergency i{
+    color: #FF2056;
+}
+.modal .modal-body .form-check span{
+    color: #4a5565;
+    transition: .3s;
+    font-size: 15px;
+    cursor: pointer;
+}
+.modal .modal-body .form-check:hover span{
+    color:#101828 ;
+}
+.modal .modal-footer .btn.cancel{
+    color: #364153;
+    transition: .3s;
+    background-color: #f6f3f4;
+}
+.modal .modal-footer .btn.cancel:hover{
+    background-color: #E5E7EB;
+}
+.modal .modal-footer .btn.save{
+    background-color: #5737F8;
+}
+.modal .modal-footer .btn.save:hover{
+    box-shadow: -1px 6px 10px -7px #5737F8;
+}
+/* end modal for inputs */
 /* end header */
 /* start main */
 main{
-    background-color: #FFF8EC;
-    height: 1350px ;
-    padding-top: 90px;
+    background-color: #F8FAFC;
+    padding-top: 100px;
+    min-height: 100vh;
 }
-main .image img{
-    height: 350px;
-}
-main .image .rating{
-    top: 20px;
-    left: 20px;
-}
-main .image .info{
-    right: 20px;
-    left: 20px;
-    bottom: 20px;
-}
-main .fixed-height{
-    height: 750px;
-}
-main .details .origin{
-    top: 20px;
-    left: 150px;
-}
-main .details .level{
-    top: 20px;
-    left: 30px;
-}
-main .details .icon{
+/* start categories */
+main .categories i{
     width: 45px;
     height: 45px;
-    background-color: #FFEDD4;
-    color:#F54900 ;
+}
+main .categories  .total i{
+    background-image: linear-gradient(to right,#7f22fe 50%,#4f39f6 100%);
+    box-shadow: 0px 2px 6px 0px color-mix(in oklab, #7f22fe 75%, transparent ); 
+}
+main .categories  .favourites i{
+    background-image: linear-gradient(to right,#ffbb00 50%,#ff6900);
+    box-shadow: 0px 2px 6px 0px color-mix(in oklab, #ff6900 75%, transparent );
+}
+main .categories  .emergency i{
+    background-image: linear-gradient(to right,#ff2056 50%,#e7000b);
+    box-shadow: 0px 2px 6px 0px color-mix(in oklab, #ff2056 75%, transparent );
+}
+/* start search input */
+main .search-container::before{
+    content: "\f002";
+    position: absolute;
+    font-weight: 900;
+    font-family: var(--fa-family-classic);
+    color: #8080806c;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);;
+}
+main input.search::placeholder{
+    color: rgba(128, 128, 128, 0.816);
+    font-size: 14px;
+    font-weight: 500;
+}
+main .search.form-control:focus {
+    border-color: #8e51ff;
+    box-shadow: 0 0 0 2px color-mix(in oklab, #8e51ff 20%, transparent);
+}
+
+/* start contacts */
+main .contacts-access .no-contacts i{
+    width: 60px;
+    height: 60px;
+}
+
+main .nameAndNum i:first-of-type{
+    top: -3px;
+    left: calc(100% - 15px);
+    font-size: 8px;
+    background-color: orange;
+    height: 20px;
+    width: 20px;
+
+}
+main .nameAndNum i:nth-of-type(2){
+    bottom: -3px;
+    left: calc(100% - 15px);
+    font-size: 8px;
+    background-color: #FF2056;
+    height: 20px;
+    width: 20px;
+}
+main .contacts .icon{
+    height: 25px;
+    width:25px
+} 
+main .contacts .contact .fa-phone,
+main .contacts .group,
+main .footer .contact .call{
+    background-color: #DBEAFE;
+    color: #155DFC;
+    transition: .3s;
+}
+main .email .fa-envelope,
+main .footer .contact .mail{
+    background-color: #EDE9FE;
+    color: #7F22FE;
+    transition: .3s
+
+}
+main .location .fa-location-dot{
+    background-color: #D0FAE5;
+    color: #009966;
+}
+main .badges .emergency{
+    background-color: #FFF1F2;
+    color: #ff2056;
+}
+main .inner .footer{
+    background-color: #FAFBFC;
+    
+}
+main .footer .contact .call:hover{
+    background-color: #D0FAE5;
+    color: #009966;
+    
+}
+main .footer .contact .mail:hover{
+    background-color: #EDE9FE;
+    color: #FFB900;
+}
+
+/* actions */
+main .inner .footer .fa-star,
+main .inner .footer .fa-pen,
+main .inner .footer .fa-trash,
+main .inner .footer .actions button:nth-of-type(2){
+    color: rgb(106, 114, 130);
+
+}
+main .inner .footer .actions button:not(:nth-of-type(2)){
+    background-color: transparent;
+    transition: .3s;
+}
+main .inner .footer .actions button:nth-of-type(2){
+    background-color: #fff1f2;
+
+    transition: .3s;
+}
+main .inner .footer .actions button:nth-of-type(2):hover{
+    background-color: #FFE4E6;
+}
+main .inner .footer .actions button:first-of-type:hover{
+    background-color:#F3F4F6 ;
+    
+}
+main .inner .footer .actions button:first-of-type:hover i{
+    color: #FFB900;
+}
+main .inner .footer .actions button:nth-of-type(3):hover{
+    background-color:#EEF2FF ;
+    
+}
+main .inner .footer .actions button:nth-of-type(3):hover i{
+    color: #4F39F6;
+}
+main .inner .footer .actions button:last-of-type:hover{
+    background-color:#FFF1F2 ;
+    
+}
+main .inner .footer .actions button:last-of-type:hover i{
+    color: #EC003F;
+}
+/* end contacts */
+/* start favourite contacts */
+main .favourites-contacts .head{
+    background-color: #FFF8EC;
+}
+main .favourites-contacts .head i{
+    width: 35px;
+    height: 35px;
+    background-image: linear-gradient(to right,#ffbb00 50%,#ff6900);
+    box-shadow: 0px 2px 6px 0px color-mix(in oklab, #ff6900 75%, transparent );
+}
+main  .content  span.neck-name{
+    height: 30px;
+    width: 30px;
+    background-image: linear-gradient(to bottom right,#00b8db 50% ,#155dfc);
+}
+main .favourites-contacts .inner,
+main .emergency-contacts .inner{
+    background-color: #f2f3f5;
     transition: .3s;
     cursor: pointer;
 }
-main .details .icon:hover{
-    background-color: #FFD6A7;
+main .favourites-contacts .inner:hover{
+    background-color: #FFF8EC;
 }
-main .nav-tabs .nav-link{
-    border: none;
-    color: #6a7282;
-    font-weight: 700;
+/* end favourite contacts */
+/* start emegency contacts */
+main .emergency-contacts .inner:hover{
+    background-color: #FFF2F2;
 }
-main  .nav-tabs .nav-link.active{
-    border-bottom: 2px solid #f54900;
-    color: #F54900;
-    font-weight: 700;
-}
-main .nav-tabs .nav-link:not(:active):hover{
-    color:#364153 ;
-}
-.ingredients{
-    background-color: #FFF9EC;
-    height: 350px;
-}
-.ingredients ul{
-    counter-reset: myCounter;
-}
-.ingredients ul li{
-    counter-increment: myCounter;
-}
-.ingredients ul li::before{
-    content: counter(myCounter);
-    position: absolute;
-    left: -35px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FF6900;
-    color: #fff;
-}
-.instructions{
-    background-color: #fff;
-    height: 350px;
-}
-.instructions ul{
-counter-reset: myCounter2;
-}
-.instructions ul li{
-    counter-increment:myCounter2 ;
-}
-.instructions ul li::before{
-    content: counter(myCounter2);
-    position: absolute;
-    left: -50px;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FF6900;
-    color: #fff;
-}
-.nutration{
-height: 350px;
-}
-.nutration i{
-    width: 40px;
-    height: 40px;
-}
-.nutration i.cal{
-    color:#F54900 ;
-    background-color: #FFEDD4;
-}
-.nutration i.pro{
-    color: #155DFC;
-    background-color:#DBEAFE ;
-}
-.nutration i.carb{
-    color: #D08700;
-    background-color:#FEF9C2 ;
-}
-.nutration i.fat{
-    color:#E7000B ;
-    background-color: #FFE2E2;
-}
-.nutration i.fiber{
-    color: #1EB255;
-    background-color:#DBFCE7 ;
-}
-.nutration i.sod{
-    color:#E60076 ;
-    background-color:#FCE7F3 ;
-}
-.tips{
-height: 350px;
-}
-
-.tips ul li{
-    background-color: #FFFBEB;
-    box-shadow: -4px 0px 0 0 #F54900;
-}
-
-#shuffle{
-    background-image: linear-gradient(to right,#ff6900 50%, #fb2c36 100%);
+main .favourites-contacts .content .fa-phone,
+main .emergency-contacts .content .fa-phone{
+    height: 25px;
+    width: 25px;
     transition: .3s;
 }
-#shuffle:hover{
-    transform: scale(1.03);
-    background-image: linear-gradient(to right,#f54900 50%, #e7000b 100%);
+main .favourites-contacts .content .fa-phone{
+    background-color: #D0FAE5;
+    color: #009966c2;
+
 }
+main .favourites-contacts .inner:hover .fa-phone{
+    background-color: #009966;
+    color: #fff;
+}
+main .emergency-contacts .head{
+    background-color: #FFF2F2;
+}
+main .emergency-contacts .head i{
+    width: 35px;
+    height: 35px;
+    background-image: linear-gradient(to right,#ff2056 50%,#e7000b);
+    box-shadow: 0px 2px 6px 0px color-mix(in oklab, #ff2056 75%, transparent );
+}
+main .emergency-contacts .content .fa-phone{
+    background-color: #FFE4E6;
+    color: #EC003F;
+}
+main .emergency-contacts .inner:hover .fa-phone{
+    background-color: #EC003F;
+    color: #fff;
+}
+/* end emegency contacts */
 /* end main */
-
-@media (min-width: 576px) {
-
-}
-@media (min-width: 768px) {
-    header .navbar-collapse{
-        --bs-border-width:0px
-    }
-    
-}
-@media (min-width: 992px) {
-    main{
-        height: 900px;
-    }
-    main .image img{
-        height: 100%;
-    }
-
-}
-@media (min-width: 1200px) {
-    
-}
